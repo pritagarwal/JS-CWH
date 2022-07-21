@@ -25,16 +25,17 @@ div2.setAttribute('style', 'border:2px solid black; width: 154px; margin: 34px; 
 //event handler and event listner
 div2.addEventListener("click",fun1);
 function fun1(){
-    text.setAttribute("contenteditable","true");
+    div2.setAttribute("contenteditable","true");
     console.log("jjh");
 }
 
 div2.addEventListener("blur",fun2);
-console.log("ii");
+
 function fun2(){
-    text.setAttribute("contenteditable","false");
+    document.body.style.backgroundColor="red";
+    div2.setAttribute("contenteditable","false");
     let new_text = text.innerHTML;
-    console.log(ii);
     localStorage.setItem("text",new_text);
 }
+
 
